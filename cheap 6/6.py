@@ -63,7 +63,9 @@ def test_suite():
     
     print("\nseconds_in")
     test(seconds_in(9010) == 10)
+    test(is_even(20)==True)
     
+    test(is_even(9)==False)
     
 def seconds_in(num):
     """the left over seconds represented by a total number of seconds"""
@@ -158,5 +160,10 @@ def day_add(name,delta):
     return end_day_name
     
     
-  
+def is_even(n):
+    """takes an integer as an argument and returns True if the argument is an even number and False if it is odd."""
+    if n % 2 == 0:
+        return True
+    else:
+        return False
 test_suite()        # Here is the call to run the tests
